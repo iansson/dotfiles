@@ -5,6 +5,8 @@ My personal dotfiles.
 
 # Utilities
 
+The tools and utilities I use for my setup. Documented here in case I forget.
+
 - **wm**: mango
 - **terminal**: foot
 - **shell**: zsh
