@@ -1,5 +1,5 @@
 # dotfiles
-My personal dotfiles.
+My personal dotfiles. This is running Mango WM on Fedora.
 
 ---
 
