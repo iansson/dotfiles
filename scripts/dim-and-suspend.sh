@@ -1,8 +1,8 @@
 #!/bin/bash
 
-dim_screen_timer=10
-lock_timer=20
-suspend_timer=30
+dim_screen_timer=100
+lock_timer=200
+suspend_timer=300
 
 
 swayidle -w \
