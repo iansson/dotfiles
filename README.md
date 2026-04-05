@@ -1,8 +1,6 @@
 # dotfiles
 My personal dotfiles. This is running Mango WM on Fedora.
 
----
-
 # Utilities
 
 The tools and utilities I use for my setup. Documented here in case I forget.
@@ -19,3 +17,7 @@ The tools and utilities I use for my setup. Documented here in case I forget.
 - **brightness manager**: brightnessctl
 - **screenshot manager**: [msnap](https://github.com/atheeq-rhxn/msnap?tab=readme-ov-file)
 - **battery health**: batctl
+
+# TODO
+
+Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to ensure idle is detected correctly.

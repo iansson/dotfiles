@@ -13,12 +13,13 @@
     ],
     "modules-right": [
         // "cpu",
+        "idle_inhibitor",
         "network",
         "pulseaudio",
         "backlight",
         "battery",
         "custom/notifications",
-        "idle_inhibitor"
+        
     ],
     "ext/workspaces": {
         "format": "{icon}",
