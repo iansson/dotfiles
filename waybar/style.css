@@ -1,0 +1,189 @@
+* {
+    font-family: "Intel One Mono";
+    font-weight: 500;
+    color: #cdd6f4;
+    /* background: transparent; */
+}
+
+/* Apply rounded corners to the main Waybar container */
+#waybar {
+    padding: 50pt;
+    border-radius: 12pt;
+    border: 2pt solid #313244;
+    background-color: rgba(17, 17, 27, 0.99);
+    /* box-shadow: inset 0 0 3pt #000; */
+}
+
+/* Ensure modules don’t overflow the rounded corners */
+#waybar>box {
+    border-radius: 12pt;
+}
+
+#modules-right {
+    margin: 20pt 20pt;
+}
+
+
+/* ALL MODULES */
+#custom-power,
+#clock,
+#battery,
+#power-profiles-daemon,
+#idle_inhibitor,
+#backlight,
+#temperature,
+#memory,
+#cpu,
+#network,
+#pulseaudio {
+    padding: 0 6pt;
+}
+
+/* FIRST GROUP (from the right) */
+#custom-power,
+#clock {
+    color: #89b4fa;
+}
+
+/* SECOND GROUP */
+#battery,
+#power-profiles-daemon,
+#idle_inhibitor,
+#backlight {
+    color: #a6e3a1;
+    background-color: #1e1e2e;
+    border: 2pt solid #313244;
+    border-left: none;
+    border-right: none;
+}
+
+/* THIRD GROUP */
+#temperature,
+#memory,
+#cpu,
+#network {
+    /* background-color: #1e1e2e; */
+    color: #f9e2af;
+    border: 2pt solid #313244;
+    border-left: none;
+    border-right: none;
+}
+
+/* FOURTH GROUP */
+
+#pulseaudio {
+    background-color: #1e1e2e;
+    color: #fab387;
+    border: 2pt solid #313244;
+    border-left: none;
+    border-right: none;
+}
+
+/* TRAY */
+
+#tray {
+    /* background-color: #2980b9; */
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+/*  WORKSPACES */
+
+#workspaces button {
+    color: #b4befe;
+    background-color: #11111b;
+    margin: 3pt;
+    min-height: 18pt;
+    min-width: 15pt;
+    padding: 0 3.75pt;
+}
+
+
+#workspaces button.hidden {
+    opacity: 0.5;
+    background: none;
+    border: none;
+}
+
+
+#workspaces button:hover {
+    background: #1e1e2e;
+    border: none;
+}
+
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+    color: #000000;
+    border: none;
+    background: #1e1e2e;
+}
+
+
+/* EVIL SPACERS */
+
+#custom-spacer-bottom,
+#custom-spacer-top {
+    font-family: Symbols Nerd Font;
+    font-size: 21pt;
+    margin: 0pt;
+    /* color: transparent; */
+
+    padding: 0;
+}
+
+#spacer,
+#spacer-inverted,
+#spacer-border {
+    background-color: rgba(49, 50, 68, 0.62);
+    border: 2pt solid #313244;
+    border-left: none;
+    border-right: none;
+}
+
+#custom-spacer-top {
+    color: #11111b;
+    background: transparent;
+    margin-right: -12px;
+    /* margin-left: -10px; */
+}
+
+#custom-spacer-bottom {
+    background: transparent;
+    margin-left: -11px;
+    color: #1e1e2e;
+}
+
+#spacer-inverted #custom-spacer-top {
+    background: transparent;
+    color: #1e1e2e;
+}
+
+#spacer-inverted #custom-spacer-bottom {
+    background: transparent;
+    color: #11111b;
+}
+
+#spacer-border #custom-spacer-top {
+    background: transparent;
+    color: #11111b;
+}
+
+#spacer-border #custom-spacer-bottom {
+    background: transparent;
+    color: #11111b;
+}
