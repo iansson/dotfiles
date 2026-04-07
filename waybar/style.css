@@ -87,14 +87,18 @@
     border: 2pt solid #313244;
     border-left: none;
     border-right: none;
+    padding: 0pt 6pt;
 }
 
+#window {
+    padding-left: 0pt;
+}
 
 /* TRAY */
 
 #tray {
     /* background-color: #2980b9; */
-    padding: 6pt;
+    /* padding: 6pt; */
 }
 
 #tray>.passive {

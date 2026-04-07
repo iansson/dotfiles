@@ -19,8 +19,8 @@
         "group/spacer",
         "dwl/window",
         // "group/tray-container",
-        "tray",
         "custom/updates",
+        "tray",
         "group/spacer-inverted",
     ],
     // "modules-center": [
