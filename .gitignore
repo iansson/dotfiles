@@ -1,0 +1,23 @@
+# ignore all files by default
+* 
+
+# choose folders to allow
+!mango/
+!scripts/
+!swaync/
+!waybar/
+!foot/
+!rofi/
+
+# choose files to allow in the allowed folders
+!/mango/**
+!/scripts/**
+!/swaync/**
+!/waybar/**
+!/foot/**
+!/rofi/**
+
+
+!README.md
+!.gitignore
+# TODO: Add gtk files as well, after config

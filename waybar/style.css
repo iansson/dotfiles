@@ -79,10 +79,22 @@
     border-right: none;
 }
 
+/* LEFTMOST GROUP */
+#window, #tray, #custom-updates {
+    color: #eba0ac;
+    background-color: #1e1e2e;
+    background-color: #1e1e2e;
+    border: 2pt solid #313244;
+    border-left: none;
+    border-right: none;
+}
+
+
 /* TRAY */
 
 #tray {
     /* background-color: #2980b9; */
+    padding: 6pt;
 }
 
 #tray>.passive {
@@ -99,17 +111,20 @@
     color: #2d3436;
 }
 
-/*  WORKSPACES */
-
-#workspaces button {
-    color: #b4befe;
-    background-color: #11111b;
-    margin: 3pt;
-    min-height: 18pt;
-    min-width: 15pt;
-    padding: 0 3.75pt;
+#custom-power {
+    margin-right: 6pt;
 }
 
+/*  WORKSPACES */
+
+#workspaces label {
+    /* background-color: #11111b; */
+    color: #cba6f7;
+    /* margin: 3pt; */
+    min-height: 18pt;
+    min-width: 15pt;
+    /* padding: 0 3.75pt; */
+}
 
 #workspaces button.hidden {
     opacity: 0.5;
@@ -128,11 +143,13 @@
 #workspaces button.visible:hover,
 #workspaces button.active,
 #workspaces button.active:hover {
-    color: #000000;
     border: none;
     background: #1e1e2e;
 }
 
+#workspaces button:first-child {
+    margin-left: 6pt;
+}
 
 /* EVIL SPACERS */
 
