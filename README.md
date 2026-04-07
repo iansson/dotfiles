@@ -10,7 +10,7 @@ The tools and utilities I use for my setup. Documented here in case I forget.
 - **shell**: zsh
 - **top bar**: waybar
 - **notifications**: swaync
-- **power management**: tuned *(default in Fedora)*
+- **power management**: tuned
 - **lock screen**: swaylock
 - **wallpaper**: swaybg *(requires logout to take effect, switch to [awww](https://codeberg.org/LGFae/awww)?)*
 - **volume manager**: pamixer
