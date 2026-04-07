@@ -20,4 +20,5 @@ The tools and utilities I use for my setup. Documented here in case I forget.
 
 # TODO
 
-Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to ensure idle is detected correctly.
+- [ ] Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to ensure idle is detected correctly.
+- [ ] Bind microphone mute button
