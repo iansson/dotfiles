@@ -19,9 +19,9 @@
         "group/spacer",
         "dwl/window",
         // "group/tray-container",
-        "custom/updates",
         "tray",
-        "group/spacer-inverted",
+        "group/spacer-inverted", 
+        "custom/updates",
     ],
     // "modules-center": [
     //     // "sway/window"
@@ -53,8 +53,8 @@
         "sort-by-id": true
     },
     "dwl/window": {
-        "format": "[{layout}]"
-        // "format": "[{layout}] {title}"
+        // "format": "[{layout}]"
+        "format": "[{layout}] {app_id}"
     },
     "custom/updates": {
         "exec": "bash $HOME/.config/scripts/check-updates.sh", // <--- path to script
