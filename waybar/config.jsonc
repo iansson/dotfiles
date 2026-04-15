@@ -12,16 +12,13 @@
     "margin": 10,
     "reload_style_on_change": true,
     "modules-left": [
-        // "sway/workspaces",
-        // "sway/mode",
-        // "sway/scratchpad"
         "ext/workspaces",
         "group/spacer",
         "dwl/window",
-        // "group/tray-container",
+        "group/tray-container",
         "tray",
-        "group/spacer-inverted", 
-        "custom/updates",
+        "group/spacer-inverted",
+        "custom/updates"
     ],
     // "modules-center": [
     //     // "sway/window"
@@ -54,7 +51,7 @@
     },
     "dwl/window": {
         // "format": "[{layout}]"
-        "format": "[{layout}] {app_id}"
+        "format": "<span color='#f5c2e7'>[{layout}] {app_id}</span>",
     },
     "custom/updates": {
         "exec": "bash $HOME/.config/scripts/check-updates.sh", // <--- path to script
@@ -103,7 +100,7 @@
     "clock#time": {
         "format": " {:%H:%M:%S }",
         "tooltip": false,
-        "interval": 1,
+        "interval": 1
     },
     "clock#date": {
         "format": " {:%d.%m}",
@@ -118,7 +115,7 @@
     },
     "memory": {
         "format": "<span font-family='Symbols Nerd Font'></span> {}%",
-        "interval": 5,
+        "interval": 5
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -131,7 +128,7 @@
             "<span font-family='Symbols Nerd Font'></span>",
             "<span font-family='Symbols Nerd Font'></span>"
         ],
-        "interval": 5,
+        "interval": 5
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -164,7 +161,7 @@
             "<span font-family='Symbols Nerd Font'></span>",
             "<span font-family='Symbols Nerd Font'>󱊣</span>"
         ],
-        "interval": 2,
+        "interval": 2
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -187,7 +184,7 @@
         "format-linked": "<span font-family='Symbols Nerd Font'></span> {ifname} (No IP) ",
         "format-disconnected": "⚠ Disconnected",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
-        "interval": 5,
+        "interval": 5
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -247,7 +244,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/spacer-top",
-            "custom/spacer-bottom",
+            "custom/spacer-bottom"
         ]
     },
     "custom/spacer-bottom": {
@@ -262,14 +259,14 @@
         "orientation": "inherit",
         "modules": [
             "custom/spacer-top",
-            "custom/spacer-bottom",
+            "custom/spacer-bottom"
         ]
     },
     "group/spacer-border": {
         "orientation": "inherit",
         "modules": [
             "custom/spacer-top",
-            "custom/spacer-bottom",
+            "custom/spacer-bottom"
         ]
     }
 }

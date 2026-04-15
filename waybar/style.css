@@ -92,6 +92,7 @@
 
 #window {
     padding-left: 0pt;
+    padding-right: 0pt;
 }
 
 #custom-updates {
@@ -104,11 +105,6 @@
 }
 
 /* TRAY */
-
-#tray {
-    /* background-color: #2980b9; */
-    /* padding: 6pt; */
-}
 
 #tray>.passive {
     -gtk-icon-effect: dim;
