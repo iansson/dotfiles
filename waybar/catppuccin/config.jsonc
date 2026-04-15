@@ -1,0 +1,272 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // "margin-top": 10,
+    // "margin-left": 10,
+    // "margin-right": 10,
+    // "margin-bottom": 0,
+    "margin": 10,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "ext/workspaces",
+        "group/spacer",
+        "dwl/window",
+        "group/tray-container",
+        "tray",
+        "group/spacer-inverted",
+        "custom/updates"
+    ],
+    // "modules-center": [
+    //     // "sway/window"
+    //     "clock"
+    // ],
+    "modules-right": [
+        "group/spacer",
+        "pulseaudio",
+        "group/spacer-inverted",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "group/spacer",
+        "backlight",
+        "idle_inhibitor",
+        "power-profiles-daemon",
+        "battery",
+        "group/spacer-inverted",
+        "group/clock",
+        "custom/notifications",
+        "custom/power"
+    ],
+    "ext/workspaces": {
+        "format": "{icon}",
+        "ignore-hidden": false,
+        "on-click": "activate",
+        "on-click-right": "deactivate",
+        "sort-by-id": true
+    },
+    "dwl/window": {
+        // "format": "[{layout}]"
+        "format": "<span color='#f5c2e7'>[{layout}] {app_id}</span>",
+    },
+    "custom/updates": {
+        "exec": "bash $HOME/.config/scripts/check-updates.sh", // <--- path to script
+        "on-click-right": "bash $HOME/.config/waybar/scripts/check-updates.sh", // refresh on right click
+        "on-click-middle": "swaymsg exec '$term -e sudo dnf update --refresh'", // update on middle click    
+        // "interval": 900, // refresh every 15 minutes
+        "interval": 1800, // refresh every 30 minutes
+        "return-type": "json",
+        "format": "{icon}",
+        "format-alt": "{icon} {text}",
+        "format-icons": {
+            "has-updates": "<span font-family='Symbols Nerd Font'></span>", // icon when updates needed
+            "updated": "" // icon when all packages updated
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon} ",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+        "format": "",
+        "icon-size": 14,
+        "spacing": 8,
+        "interval": 4
+    },
+    // "clock": {
+    //     // "timezone": "America/New_York",
+    //     "interval": 1,
+    //     "format": "{:%H:%M:%S    %d.%m}",
+    //     // "format-alt": "{:%Y-%m-%d}"
+    // },
+    "group/clock": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#time",
+            "clock#date"
+        ]
+    },
+    "clock#time": {
+        "format": " {:%H:%M:%S }",
+        "tooltip": false,
+        "interval": 1
+    },
+    "clock#date": {
+        "format": " {:%d.%m}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 60,
+    },
+    "cpu": {
+        "format": "<span font-family='Symbols Nerd Font'></span> {usage}%",
+        "tooltip": false,
+        "interval": 5
+    },
+    "memory": {
+        "format": "<span font-family='Symbols Nerd Font'></span> {}%",
+        "interval": 5
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>"
+        ],
+        "interval": 5
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>"
+        ]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% ",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        // "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'></span>",
+            "<span font-family='Symbols Nerd Font'>󱊣</span>"
+        ],
+        "interval": 2
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "<span font-family='Symbols Nerd Font'></span>",
+            "performance": "<span font-family='Symbols Nerd Font'></span>",
+            "balanced-battery": "<span font-family='Symbols Nerd Font'></span>",
+            "power-saver": "<span font-family='Symbols Nerd Font'></span>"
+        }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "<span font-family='Symbols Nerd Font'></span> {essid} ({signalStrength}%) ",
+        "format-ethernet": "<span font-family='Symbols Nerd Font'></span> {ipaddr}/{cidr}",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "<span font-family='Symbols Nerd Font'></span> {ifname} via {gwaddr}",
+        "format-linked": "<span font-family='Symbols Nerd Font'></span> {ifname} (No IP) ",
+        "format-disconnected": "⚠ Disconnected",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "interval": 5
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% <span font-family='Symbols Nerd Font'>{icon}</span> {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "<span font-family='Symbols Nerd Font'>{icon}</span> {format_source}",
+        "format-muted": "<span font-family='Symbols Nerd Font'></span> {format_source}",
+        "format-source": "{volume}% <span font-family='Symbols Nerd Font'></span>",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "interval": 2,
+    },
+    "custom/media": {
+        "format": "<span font-family='Symbols Nerd Font'>{icon}</span> {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "systemctl poweroff",
+            "reboot": "systemctl reboot",
+            "suspend": "systemctl suspend",
+            "logout": "loginctl terminate-user $USER"
+            // "hibernate": "systemctl hibernate"
+        }
+    },
+    "custom/notifications": {
+        "format": "<span color='#89b4fa' font-family='Symbols Nerd Font'>  </span>",
+        "on-click": "swaync-client -t",
+        "tooltip": false
+    },
+    "group/spacer": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/spacer-top",
+            "custom/spacer-bottom"
+        ]
+    },
+    "custom/spacer-bottom": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/spacer-top": {
+        "format": "",
+        "tooltip": false
+    },
+    "group/spacer-inverted": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/spacer-top",
+            "custom/spacer-bottom"
+        ]
+    },
+    "group/spacer-border": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/spacer-top",
+            "custom/spacer-bottom"
+        ]
+    }
+}
