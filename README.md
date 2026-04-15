@@ -1,7 +1,11 @@
 # dotfiles
 My personal dotfiles. Built around Mango on Fedora.
 
-# Utilities
+## current rice
+![Current Rice](assets/20260415175737.png)
+Color scheme: Catpuccin
+
+# utilities
 
 The tools and utilities I use for my setup. Documented here in case I forget.
 
@@ -18,7 +22,9 @@ The tools and utilities I use for my setup. Documented here in case I forget.
 - **screenshot manager**: [msnap](https://github.com/atheeq-rhxn/msnap?tab=readme-ov-file)
 - **battery health**: batctl
 
-# TODO
+<p>
 
-- [ ] Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to ensure idle is detected correctly.
+# notes
+
+- [ ] Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to inhibit idle when audio is playing
 - [ ] Bind microphone mute button
