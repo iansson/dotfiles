@@ -28,3 +28,4 @@ The tools and utilities I use for my setup. Documented here in case I forget.
 
 - [ ] Look into [SwayAudioIdleInhibit](https://github.com/ErikReider/SwayAudioIdleInhibit) to inhibit idle when audio is playing
 - [ ] Bind microphone mute button
+- [ ] Theme swaylock ([this example](https://github.com/RedBorg/dotfiles-sway-island/blob/master/.config/swaylock/lock.sh) is pretty cool)
